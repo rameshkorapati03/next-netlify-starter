@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Header from '@components/HeaderSite'
 import Footer from '@components/Footer'
-
+import { Layout, Space } from 'antd';
+const { Sider, Content } = Layout;
 export default function Home() {
   return (
     <div className="container">
@@ -10,14 +11,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Header title="Welcome to Sree Srinivasa" />
-        <p className="description">
-          Site yet to complete
-        </p>
-      </main>
-
-      <Footer />
+      <Space
+    direction="vertical"
+    style={{
+      width: '100%',
+    }}
+    size={[0, 48]}
+  >
+  <Layout>
+      <Header />
+   
+<Content>site being constructing</Content>
+    <Footer />
+    </Layout>
+    </Space>
     </div>
   )
 }
